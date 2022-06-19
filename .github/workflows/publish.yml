@@ -3,17 +3,7 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-
 jobs:
-  generate-changelog:
-    name: Generate Changelog 📝
-    runs-on: ubuntu-latest
-    continue-on-error: false
-    steps:
-    - uses: actions/checkout@v3
-    - name: Generate changelog
-      run: make html
-
   publish:
     name: Publish 📦
     runs-on: ubuntu-latest
