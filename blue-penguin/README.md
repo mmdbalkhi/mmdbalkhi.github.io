@@ -1,4 +1,4 @@
-This is a fork from [https://github.com/jody-frankowski/blue-penguin]
+This is a fork from [blue-penguin](https://github.com/jody-frankowski/blue-penguin)
 
 Thanks to [Arash Latifi](https://github.com/ArashDevArt) for adding the dark mode :heart:
 
