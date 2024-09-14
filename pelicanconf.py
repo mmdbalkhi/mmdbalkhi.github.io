@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = "Komeil Parseh"
-SITENAME = "mmdbalkhi's blog"
-SITEURL = "https://mmdbalkhi.github.io"
+SITENAME = "Komeil's Personal website"
+SITEURL = "https://mmdbalkhi.ir"
 
 PATH = "content/blog"
 STATIC_PATHS = [
@@ -36,7 +36,6 @@ LINKS = (
 # Social widget
 SOCIAL = (
     ("Twitter", "https://twitter.com/MmdBalkhi/"),
-    ("Mas.To", "https://mas.to/@mmdbalkhi"),
 )
 
 DEFAULT_PAGINATION = False
@@ -83,14 +82,14 @@ ARCHIVES_SAVE_AS = "archives/index.html"
 MENU_INTERNAL_PAGES = (
     ("Tags", TAGS_URL, TAGS_SAVE_AS),
     ("Categories", CATEGORIES_URL, CATEGORIES_SAVE_AS),
-    ("Authors", AUTHORS_URL, AUTHORS_URL),
+    # ("Authors", AUTHORS_URL, AUTHORS_URL),
     ("Archives", ARCHIVES_URL, ARCHIVES_SAVE_AS),
 )
 
 # additional menu items
 MENUITEMS = (
     ("GitHub", "https://github.com/mmdbalkhi"),
-    ("RSS", "https://mmdbalkhi.github.io/feeds/all.atom.xml"),
+    ("RSS", "https://mmdbalkhi.ir/feeds/all.atom.xml"),
 )
 
 EXTRA_PATH_METADATA = {
