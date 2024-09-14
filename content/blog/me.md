@@ -4,7 +4,6 @@ authors: mmdbalkhi
 date: Sep 14, 2023 20:30:00
 tags: me
 slug: me
-### About Me
 
 Hi, I’m Komeil Parseh. I have a strong interest in programming, particularly with Linux, Python, Rust, and C. I enjoy taking on new projects and contributing to open-source initiatives.
 
