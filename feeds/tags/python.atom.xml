@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Komeil's Personal website - python</title><link href="https://mmdbalkhi.ir/" rel="alternate"></link><link href="https://mmdbalkhi.ir/feeds/tags/python.atom.xml" rel="self"></link><id>https://mmdbalkhi.ir/</id><updated>2023-10-19T00:39:00+03:30</updated><entry><title>F0x | File Upload and Retrieval</title><link href="https://mmdbalkhi.ir/blog/2023/Oct/19/f0x/" rel="alternate"></link><published>2023-10-19T00:39:00+03:30</published><updated>2023-10-19T00:39:00+03:30</updated><author><name>mmdbalkhi</name></author><id>tag:mmdbalkhi.ir,2023-10-19:/blog/2023/Oct/19/f0x/</id><summary type="html">&lt;p&gt;f0x is a minimal application designed to simplify file uploads and retrievals. It allows users to upload files  and retrieve them via a unique URL.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/mmdbalkhi/f0x"&gt;&lt;strong&gt;f0x&lt;/strong&gt;&lt;/a&gt; is a minimal application designed to simplify file uploads and retrievals. It allows users to upload files and retrieve them via a unique URL.&lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;File Upload&lt;/strong&gt;: Upload files easily using a POST request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File Retrieval&lt;/strong&gt;: Access uploaded files through a unique URL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimalistic&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Usage&lt;/h2&gt;
+&lt;h3&gt;Uploading a File&lt;/h3&gt;
+&lt;p&gt;To upload a file, send a POST request to the &lt;code&gt;/&lt;/code&gt; endpoint with the file included in the request body.&lt;/p&gt;
+&lt;p&gt;Example using &lt;code&gt;curl&lt;/code&gt; :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl&lt;span class="w"&gt;  &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;file=@/path/to/your/file&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;127&lt;/span&gt;.0.0.1:5000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Retrieving a File&lt;/h3&gt;
+&lt;p&gt;After uploading, you will receive a unique URL to access the file. Simply navigate to this URL in your browser or use it in your application to download the file.&lt;/p&gt;
+&lt;h2&gt;How to run&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone the repository:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;https://github.com/mmdbalkhi/f0x.git&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;f0x
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install the required packages with pdm:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pdm&lt;span class="w"&gt; &lt;/span&gt;install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run the application:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pdm&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;flask&lt;span class="w"&gt; &lt;/span&gt;--app&lt;span class="w"&gt; &lt;/span&gt;src/f0x/main.py&lt;span class="w"&gt; &lt;/span&gt;run
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;!--TODO: talk about code--&gt;</content><category term="blog"></category><category term="f0x"></category><category term="flask"></category><category term="python"></category></entry></feed>

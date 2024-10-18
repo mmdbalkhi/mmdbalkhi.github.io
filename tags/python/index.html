@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Komeil's Personal website - Authors</title>
+    <title>Komeil's Personal website | articles tagged "python"</title>
     <link rel="shortcut icon" type="image/png" href="https://mmdbalkhi.ir/extra/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://mmdbalkhi.ir/extra/favicon.ico">
     <link href="https://mmdbalkhi.ir/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Komeil's Personal website Full Atom Feed" />
+    <link href="https://mmdbalkhi.ir/feeds/tags/python.atom.xml" type="application/atom+xml" rel="alternate" title="Komeil's Personal website Tags Atom Feed" />
     <link rel="stylesheet" href="https://mmdbalkhi.ir/theme/css/main.css" type="text/css" />
     <link rel="stylesheet" href="https://mmdbalkhi.ir/theme/css/pygments.css" type="text/css" />
     <meta name="generator" content="Pelican" />
@@ -17,6 +18,7 @@
     <header>
         <nav>
             <ul>
+                <li class="ephemeral selected"><a href="https://mmdbalkhi.ir/tags/python/index.html">python</a></li>
                 <li><a href="https://mmdbalkhi.ir/">Home</a></li>
                 <li><a href="https://github.com/mmdbalkhi">GitHub</a></li>
                 <li><a href="https://mmdbalkhi.ir/feeds/all.atom.xml">RSS</a></li>
@@ -38,10 +40,62 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">    <h1>Authors on Komeil's Personal website</h1>
-    <ul>
-        <li><a href="https://mmdbalkhi.ir/author/mmdbalkhi.html">mmdbalkhi</a> (2)</li>
-    </ul>
+        <div id="content">            <h4 class="date">Oct 19, 2023</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="https://mmdbalkhi.ir/blog/2023/Oct/19/f0x/" rel="bookmark" title="Permanent Link to &quot;F0x | File Upload and Retrieval&quot;">F0x | File Upload and Retrieval</a>
+                </h2>
+
+
+                <p><a href="https://github.com/mmdbalkhi/f0x"><strong>f0x</strong></a> is a minimal application designed to simplify file uploads and retrievals. It allows users to upload files and retrieve them via a unique URL.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>File Upload</strong>: Upload files easily using a POST request.</li>
+<li><strong>File Retrieval</strong>: Access uploaded files through a unique URL.</li>
+<li><strong>Minimalistic</strong></li>
+</ul>
+<h2>Usage</h2>
+<h3>Uploading a File</h3>
+<p>To upload a file, send a POST request to the <code>/</code> endpoint with the file included in the request body.</p>
+<p>Example using <code>curl</code> :</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w">  </span>-F<span class="w"> </span><span class="s1">&#39;file=@/path/to/your/file&#39;</span><span class="w"> </span><span class="m">127</span>.0.0.1:5000
+</code></pre></div>
+
+<h3>Retrieving a File</h3>
+<p>After uploading, you will receive a unique URL to access the file. Simply navigate to this URL in your browser or use it in your application to download the file.</p>
+<h2>How to run</h2>
+<ul>
+<li>Clone the repository:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mmdbalkhi/f0x.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>f0x
+</code></pre></div>
+
+<ul>
+<li>Install the required packages with pdm:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>pdm<span class="w"> </span>install
+</code></pre></div>
+
+<ul>
+<li>Run the application:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>pdm<span class="w"> </span>run<span class="w"> </span>flask<span class="w"> </span>--app<span class="w"> </span>src/f0x/main.py<span class="w"> </span>run
+</code></pre></div>
+
+<!--TODO: talk about code-->
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="https://mmdbalkhi.ir/blog/2023/Oct/19/f0x/">posted at 00:39</a>
+                    <a href="https://mmdbalkhi.ir/author/mmdbalkhi.html">by mmdbalkhi</a>
+                    &nbsp;&middot;&nbsp;<a href="https://mmdbalkhi.ir/categories/blog/" rel="tag">blog</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="https://mmdbalkhi.ir/tags/f0x/" class="tags">f0x</a>
+                    &nbsp;<a href="https://mmdbalkhi.ir/tags/flask/" class="tags">flask</a>
+                    &nbsp;<a href="https://mmdbalkhi.ir/tags/python/" class="tags selected">python</a>
+                </div>
+            </article>
 
             <div class="clear"></div>
             <footer>
