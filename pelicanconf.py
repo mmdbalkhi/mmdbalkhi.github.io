@@ -36,6 +36,7 @@ LINKS = (
 # Social widget
 SOCIAL = (
     ("Twitter", "https://twitter.com/MmdBalkhi/"),
+    ("Mastodon", "https://mas.to/@mmdbalkhi"),
 )
 
 DEFAULT_PAGINATION = False
