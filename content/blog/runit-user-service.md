@@ -2,7 +2,7 @@ title: Runit user-side services
 summary: A minimal guide for runnit user-level services with runit
 authors: Komeil
 date: Mar 30, 2026 03:59:53
-tags: runit,user-side,services,desystemd,void
+tags: runit,desystemd,voidlinux
 slug: runit-user-side-services
 
 A minimal guide for running **user‑level services with runit** without systemd.
@@ -139,3 +139,7 @@ sv up service/wallpaper
 - Keep `run` scripts simple.
 - Avoid running multiple instances of the same program.
 - Separate **core services** (pipewire, portals) from **session services** (notifications, idle managers).
+
+## See Also:
+
+- A few user-side services [git](https://cgit.mmdbalkhi.ir/runit-user.git/)
