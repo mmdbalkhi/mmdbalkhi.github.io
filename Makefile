@@ -1,5 +1,5 @@
 PY?=python3
-PELICAN?=pelican
+PELICAN?=.venv/bin/pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
@@ -28,6 +28,13 @@ ifneq ($(PORT), 0)
 	PELICANOPTS += -p $(PORT)
 endif
 
+CONFIG_FILE=.config.env
+
+ifeq ($(wildcard $(CONFIG_FILE)),)
+    $(error Missing .config.env file)
+endif
+
+include $(CONFIG_FILE)
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -42,7 +49,8 @@ help:
 	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
 	@echo '   make devserver-global               regenerate and serve on 0.0.0.0    '
 	@echo '   make github                         upload the web site via gh-pages   '
-	@echo '   make manager[PORT=5000]             run markdown manager(flaskCWG)     '
+	@echo '   make deploy                         upload into server via rsync       '
+	@echo '   make fix-perms                      fix REMOTE_DIR perm on the server  '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -71,12 +79,15 @@ devserver-global:
 
 publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
+deploy: publish
+	rsync -avz --delete \
+	--chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
+	$(OUTPUTDIR)/ $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_DIR)/
+fix-perms:
+	ssh $(REMOTE_USER)@$(REMOTE_HOST) "chown -R www-data:www-data $(REMOTE_DIR)"
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)"
 	git push origin $(GITHUB_PAGES_BRANCH)
 
-manager:
-	"$(PY)" "manager.py"
-
-.PHONY: html help clean regenerate serve serve-global devserver publish github manager
+.PHONY: html help clean regenerate serve serve-global devserver publish github
