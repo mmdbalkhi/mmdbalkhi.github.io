@@ -3,7 +3,7 @@
 
 AUTHOR = "Komeil Parseh"
 SITENAME = "Komeil's Personal website"
-SITEURL = "https://mmdbalkhi.ir"
+SITEURL = "https://www.mmdbalkhi.ir"
 
 PATH = "content/blog"
 STATIC_PATHS = [
@@ -22,7 +22,6 @@ TAG_FEED_ATOM = "feeds/tags/{slug}.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/categories/{slug}.atom.xml"
 
 # comment handlere
-#UTTERANC_REPO = "mmdbalkhi/mmdbalkhi.github.io"
 
 # Blogroll
 LINKS = (
@@ -35,8 +34,8 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("Twitter", "https://twitter.com/MmdBalkhi/"),
-    ("Mastodon", "https://mas.to/@mmdbalkhi"),
+    ("Twitter", "https://twitter.com/mmdbalkhi/"),
+    ("Mastodon", "https://fosstodon.org/@komeil"),
 )
 
 DEFAULT_PAGINATION = False
@@ -69,8 +68,8 @@ CATEGORY_URL = "categories/{slug}/"
 TAG_SAVE_AS = "tags/{slug}/index.html"
 TAG_URL = "tags/{slug}/"
 
-ARTICLE_URL = "blog/{date:%Y}/{date:%b}/{date:%d}/{slug}/"
-ARTICLE_SAVE_AS = "blog/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html"
+ARTICLE_URL = "b/{date:%Y}/{date:%b}/{date:%d}/{slug}/"
+ARTICLE_SAVE_AS = "b/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html"
 PAGE_URL = "pages/{slug}/"
 PAGE_SAVE_AS = "pages/{slug}/index.html"
 
@@ -90,7 +89,7 @@ MENU_INTERNAL_PAGES = (
 # additional menu items
 MENUITEMS = (
     ("GitHub", "https://github.com/mmdbalkhi"),
-    ("RSS", "https://mmdbalkhi.ir/feeds/all.atom.xml"),
+    ("RSS", "https://www.mmdbalkhi.ir/feeds/all.atom.xml"),
 )
 
 EXTRA_PATH_METADATA = {
