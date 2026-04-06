@@ -4,13 +4,13 @@
 
             <article class="post">
                 {% if article.title %}
-                <h2 class="title">
-                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permanent Link to &quot;{{ article.title|striptags }}&quot;">{{ article.title }}</a>
-                </h2>
+                    <h2 class="title">
+                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permanent Link to &quot;{{ article.title|striptags }}&quot;">{{ article.title }}</a>
+                    </h2>
                 {% endif %}
-		{% if not articles_page %}
-		{% include "translations.html" %}
-		{% endif %}
+                {% if not articles_page %}
+                {% include "translations.html" %}
+                {% endif %}
 
 
                 {{ article.content }}
@@ -24,9 +24,6 @@
                     {% if article.author %}
                     <a href="{{ SITEURL }}/{{ article.author.url }}">by {{ article.author }}</a>
                     {% endif %}
-                    {% if article.category.name != "misc" %}
-                    &nbsp;&middot;&nbsp;<a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
-                    {% endif %}
                     {% if article.tags %}
                     &nbsp;&middot;
                     {% for t in article.tags %}
@@ -34,9 +31,9 @@
                     {% endfor %}
                     {% endif %}
                 </div>
-		{% if articles_page and DISQUS_SITENAME %}
-		    <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Click to read and post comments</a>
-		{% else %}
-		{% include "disqus.html" %}
-		{% endif %}
+                {% if articles_page and DISQUS_SITENAME %}
+                    <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Click to read and post comments</a>
+                {% else %}
+                {% include "disqus.html" %}
+                {% endif %}
             </article>
